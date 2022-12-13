@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "cursor_position"
+name = "mouse_position"
 version = "0.1.0"

@@ -1,17 +1,17 @@
-use crate::cursor_position::{Cursor, Position};
+use crate::mouse_position::{Mouse, Position};
 
 mod impl_linux;
-mod cursor_position;
+mod mouse_position;
 
 fn main() {
     
     loop {
-        let position = Cursor::get_cursor_position();
-        
+        let position = Mouse::get_mouse_position();
+
         let position  = match position {
-            Cursor::Position { x, y } => Position { x, y },
+            Mouse::Position { x, y } => Position { x, y },
             // if error, default to 0, 0
-            Cursor::Error => Position { x: 0, y: 0 }
+            Mouse::Error => Position { x: 0, y: 0 }
         };
     
         println!("x: {}, y: {}", position.x, position.y);

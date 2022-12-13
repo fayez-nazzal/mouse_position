@@ -1,9 +1,9 @@
 use std::io;
-use crate::cursor_position::Cursor;
+use crate::mouse_position::Mouse;
 
 #[cfg(target_os = "linux")]
-impl Cursor {
-    pub fn get_cursor_position() -> Cursor {
+impl Mouse {
+    pub fn get_mouse_position() -> Mouse {
         use std::{process::{Command, Stdio}, io::{Read, BufReader}};
 
         let output = match Command::new("xdotool")
@@ -12,7 +12,7 @@ impl Cursor {
                 .stdout(Stdio::piped())
                 .spawn() {
             Ok(it) => it,
-            Err(_) => return Cursor::Error
+            Err(_) => return Mouse::Error
         }
             .stdout
             .ok_or(io::Error::new(io::ErrorKind::Other, "Failed to capture xdotool output")).unwrap();
@@ -36,6 +36,6 @@ impl Cursor {
             }
         }
     
-        Cursor::Position { x, y }
+        Mouse::Position { x, y }
     }
 }

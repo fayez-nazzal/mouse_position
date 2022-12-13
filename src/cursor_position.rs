@@ -4,7 +4,7 @@ pub struct Position {
     pub y: i32
 }
 
-pub enum Cursor {
+pub enum Mouse {
     Position { x: i32, y: i32 },
     Error
 }
