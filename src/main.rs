@@ -1,9 +1,4 @@
-use crate::mouse_position::{Mouse, Position};
-
-mod impl_linux;
-mod impl_windows;
-mod impl_macos;
-mod mouse_position;
+use mouse_position::mouse_position::{Mouse, Position};
 
 fn main() {
     
