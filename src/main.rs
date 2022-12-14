@@ -2,6 +2,7 @@ use crate::mouse_position::{Mouse, Position};
 
 mod impl_linux;
 mod impl_windows;
+mod impl_macos;
 mod mouse_position;
 
 fn main() {
