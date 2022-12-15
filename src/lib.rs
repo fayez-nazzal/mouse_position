@@ -2,7 +2,7 @@
 //! It uses winapi crate to get the mouse position on windows, x11-dl for linux, and core-graphics for macos.
 //! Example Usage:
 //! ```rust
-//! use mouse_position::mouse_position::{Mouse, Position};
+//! use mouse_position::mouse_position::{Mouse};
 //! 
 //! fn main() {
 //!     let position = Mouse::get_mouse_position();
