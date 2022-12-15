@@ -1,5 +1,5 @@
 //! A a simple crate to get the mouse position in a cross platform way.
-//! It uses the winapi crate to get the mouse position on windows, x11-dl to get the mouse position on linux, and core-graphics to get the mouse position on macos.
+//! It uses winapi crate to get the mouse position on windows, x11-dl for linux, and core-graphics for macos.
 //! Example Usage:
 //! ```rust
 //! use mouse_position::mouse_position::{Mouse, Position};
