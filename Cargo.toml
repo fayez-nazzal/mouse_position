@@ -1,5 +1,11 @@
 [package]
 name = "mouse_position"
+authors = ["Fayez Nazzal"]
+description = "Get the mouse position on Linux, Windows and MacOS"
+repository = "https://github.com/fayez-nazzal/mouse_position"
+keywords = ["mouse", "position", "linux", "windows", "macos"]
+categories = ["gui"]
+license = "MIT"
 version = "0.1.0"
 edition = "2021"
 
@@ -8,7 +14,7 @@ edition = "2021"
 [target.'cfg(target_os = "linux")'.dependencies]
 x11-dl = "2.20.1"
 
-[target.'cfg(windows)'.dependencies]
+[target.'cfg(target_os = "windows")'.dependencies]
 winapi = { version = "0.3.9", features = ["winuser"] }
 
 [target.'cfg(target_os = "macos")'.dependencies]

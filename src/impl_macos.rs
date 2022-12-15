@@ -1,4 +1,5 @@
 
+//! Implementation for MacOS.
 use crate::mouse_position::Mouse;
 
 #[cfg(target_os = "macos")]
