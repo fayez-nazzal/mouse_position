@@ -1,4 +1,5 @@
 //! Implementation for Linux.
+#[cfg(target_os = "linux")]
 use crate::mouse_position::Mouse;
 
 #[cfg(target_os = "linux")]
