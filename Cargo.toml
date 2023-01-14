@@ -15,7 +15,11 @@ edition = "2021"
 x11-dl = "2.20.1"
 
 [target.'cfg(target_os = "windows")'.dependencies]
-winapi = { version = "0.3.9", features = ["winuser"] }
+winapi = { version = "0.3.9", features = ["winuser", "shellscalingapi"] }
 
 [target.'cfg(target_os = "macos")'.dependencies]
 core-graphics = "0.22.3"
+
+[dependencies]
+winapi = "0.3.9"
+winit = "0.27.5"
