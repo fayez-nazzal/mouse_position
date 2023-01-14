@@ -1,7 +1,6 @@
 use mouse_position::mouse_position::{Mouse, Position};
 
 fn main() {
-
     loop {
         let position = Mouse::get_mouse_position();
 
