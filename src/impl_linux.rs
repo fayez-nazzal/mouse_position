@@ -1,8 +1,8 @@
 //! Implementation for Linux.
-#[cfg(target_os = "linux")]
+#[cfg(any(target_os = "linux", target_os = "freebsd"))]
 use crate::mouse_position::Mouse;
 
-#[cfg(target_os = "linux")]
+#[cfg(any(target_os = "linux", target_os = "freebsd"))]
 impl Mouse {
     pub fn get_mouse_position() -> Mouse {
         use x11_dl::xlib;
